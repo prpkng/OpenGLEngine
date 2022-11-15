@@ -1,0 +1,4 @@
+/home/prpkng/Desktop/clion-2022.2.4/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_MAKE_PROGRAM=/home/prpkng/Desktop/clion-2022.2.4/bin/ninja/linux/ninja -G Ninja -S /home/prpkng/CLionProjects/GLEngine -B /home/prpkng/CLionProjects/GLEngine/cmake-build-release
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/prpkng/CLionProjects/GLEngine/cmake-build-release

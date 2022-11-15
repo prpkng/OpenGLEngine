@@ -1,0 +1,15 @@
+# ninja log v5
+4959	5043	1668490285964618996	OpenGLEngine	83e85e37a160e365
+564	980	1668490281900523440	CMakeFiles/OpenGLEngine.dir/src/OGL/Texture.cpp.o	d39d709e4c7f2bd2
+1935	2453	1668490283372558045	CMakeFiles/OpenGLEngine.dir/src/Engine/CursorSprite.cpp.o	4f824f1620eac87c
+403	470	1668490281392511500	CMakeFiles/OpenGLEngine.dir/src/OGL/VBO.cpp.o	7ca097b02154e098
+595	1492	1668490282412535476	CMakeFiles/OpenGLEngine.dir/src/Engine/Game.cpp.o	da3c89f0c94dfb91
+0	594	1668490281516514414	CMakeFiles/OpenGLEngine.dir/src/main.cpp.o	1f6d0b5de21df82
+561	4959	1668490285880617021	CMakeFiles/OpenGLEngine.dir/src/stb_image.cpp.o	756c387af50c265b
+1492	1934	1668490282856545913	CMakeFiles/OpenGLEngine.dir/src/Engine/Utilities.cpp.o	35153f340bc15560
+1	560	1668490281480513568	CMakeFiles/OpenGLEngine.dir/src/OGL/Shaders.cpp.o	a5664f9292c49d15
+980	1712	1668490282632540647	CMakeFiles/OpenGLEngine.dir/src/Engine/Scene.cpp.o	67bf617e6b8c9070
+471	514	1668490281432512440	CMakeFiles/OpenGLEngine.dir/src/OGL/EBO.cpp.o	51cccb7eb1ebfd3f
+514	564	1668490281484513662	CMakeFiles/OpenGLEngine.dir/src/OGL/VAO.cpp.o	c07b35d6e3ce803e
+1712	2265	1668490283184553625	CMakeFiles/OpenGLEngine.dir/src/Engine/Sprite.cpp.o	e242d844dd829867
+1	403	1668490281324509902	CMakeFiles/OpenGLEngine.dir/src/deps/GLAD/glad.c.o	37785fa852c55012
