@@ -1,4 +1,4 @@
-/home/prpkng/Desktop/clion-2022.2.4/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_MAKE_PROGRAM=/home/prpkng/Desktop/clion-2022.2.4/bin/ninja/linux/ninja -G Ninja -S /home/prpkng/CLionProjects/GLEngine -B /home/prpkng/CLionProjects/GLEngine/cmake-build-release
+"C:\Program Files\JetBrains\CLion 2022.2.4\bin\cmake\win\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Release -G "CodeBlocks - MinGW Makefiles" -S C:\Users\guiej\CLionProjects\OpenGLEngine -B C:\Users\guiej\CLionProjects\OpenGLEngine\cmake-build-release
 -- Configuring done
 -- Generating done
--- Build files have been written to: /home/prpkng/CLionProjects/GLEngine/cmake-build-release
+-- Build files have been written to: C:/Users/guiej/CLionProjects/OpenGLEngine/cmake-build-release

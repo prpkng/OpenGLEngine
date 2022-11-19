@@ -1,3 +1,3 @@
-/home/prpkng/CLionProjects/GLEngine/cmake-build-debug/CMakeFiles/OpenGLEngine.dir
-/home/prpkng/CLionProjects/GLEngine/cmake-build-debug/CMakeFiles/edit_cache.dir
-/home/prpkng/CLionProjects/GLEngine/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+C:/Users/guiej/CLionProjects/OpenGLEngine/cmake-build-debug/CMakeFiles/OpenGLEngine.dir
+C:/Users/guiej/CLionProjects/OpenGLEngine/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/guiej/CLionProjects/OpenGLEngine/cmake-build-debug/CMakeFiles/rebuild_cache.dir

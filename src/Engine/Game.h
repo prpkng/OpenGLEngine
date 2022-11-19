@@ -17,8 +17,9 @@
 #include "FileManager.h"
 #include "Scene.h"
 #include "Utilities.h"
-#include "Sprite.h"
-#include "CursorSprite.h"
+#include "Objects/Sprite.h"
+#include "Components/Component.h"
+#include "Components/CursorComponent.h"
 
 
 
@@ -32,11 +33,14 @@ public:
 
     vec2i* windowSize;
     const char* windowCaption;
+    bool cursorShown = true;
 
     std::vector<Scene> scenes;
 
     int curSceneIndex = 0;
 
+
+    [[maybe_unused]]
     void Initialize();
     void MainLoop();
     void Update();

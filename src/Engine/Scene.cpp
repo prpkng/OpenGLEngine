@@ -4,16 +4,16 @@ void Scene::LoadContent() {
 
 }
 
-void Scene::InitScene() {
+void Scene::InitScene(GLFWwindow* window) {
 //    Shader defShader("default.vert", "default.frag");
     for (auto s: sprites){
-        s->Init();
+        s->Init(window);
     }
 }
 
-void Scene::UpdateScene(double dt, GLFWwindow* window) {
+void Scene::UpdateScene(double dt) {
     for (auto s: sprites){
-        s->Update(dt, window);
+        s->Update(dt);
     }
 }
 

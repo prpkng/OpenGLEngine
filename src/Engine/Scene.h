@@ -9,7 +9,7 @@
 
 #include <array>
 #include "Utilities.h"
-#include "Sprite.h"
+#include "Objects/Sprite.h"
 #include <algorithm>
 
 
@@ -20,8 +20,8 @@ public:
     std::vector<Sprite*> sprites;
 
 
-    void InitScene();
-    void UpdateScene(double dt, GLFWwindow* window);
+    void InitScene(GLFWwindow* window);
+    void UpdateScene(double dt);
     void RenderScene(vec2i* windSize);
     void LoadContent();
     void DeleteScene();

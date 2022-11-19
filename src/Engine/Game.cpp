@@ -9,14 +9,17 @@ Game::Game(vec2i windSize, const char *name) {
 
     std::string file = FileManager::ReadFile("config.json");
     nlohmann::json js = nlohmann::json::parse(file);
-    if (js) {
+    if (!js.empty()) {
         windowSize->x = js["screen_width"];
         windowSize->y = js["screen_height"];
+        windowCaption = std::string(js["caption"]).c_str();
+        cursorShown = js["cursor_shown"];
+        std::cout << cursorShown;
         //windowCaption = std::string(js["caption"]).c_str();
     }
 }
 
-void Game::Initialize() {
+[[maybe_unused]] void Game::Initialize() {
     if (!glfwInit()){
         exit(-1);
     }
@@ -67,6 +70,8 @@ void Game::Initialize() {
     Sprite* spr = new Sprite(0.0f, 0.0f, 200.0f, 200.0f, defShader, spyral);
     //CursorSprite* cursor = new CursorSprite(32.0f, 32.0f, defShader, cursorPng);
 
+    spr->AddComponent(CursorComponent(spr));
+    std::cout << spr->ListComponents();
     Scene scene;
 
 
@@ -75,7 +80,7 @@ void Game::Initialize() {
     scene.sprites.push_back(spr);
 
     scene.LoadContent();
-    scene.InitScene();
+    scene.InitScene(window);
     scenes.push_back(scene);
 
     SetCursor("cursor.png");
@@ -120,7 +125,7 @@ void Game::Update() {
     auto ws = vec2i(sizeX, sizeY);
     windowSize = &ws;
 
-    scenes[curSceneIndex].UpdateScene(dt, window);
+    scenes[curSceneIndex].UpdateScene(dt);
 }
 
 void Game::Render() {
