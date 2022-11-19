@@ -17,7 +17,7 @@ public:
 
     void Init(GLFWwindow *window) override;
     void Update(float dt) override;
-
+    void Render() override {}
      operator string() override{
         return "CursorComponent";
     }

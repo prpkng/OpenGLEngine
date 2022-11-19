@@ -20,11 +20,11 @@ void Sprite::Update(double dt) {
 
     glfwGetCursorPos(window, &cx, &cy);
 
-    bounds->offsetX += dt;
+    //bounds->offsetX += dt;
 }
 
 void Sprite::Render(vec2i* screen) {
-    RenderComponents();
+    //RenderComponents();
     vao.Bind();
     Rect rect(pos, size);
 
@@ -38,7 +38,7 @@ void Sprite::Render(vec2i* screen) {
     float hW = screen->x / 2;
     float hH = screen->y / 2;
 
-    GLfloat verts[] ={
+    /*GLfloat verts[] ={
         //COORDINATES                                  / COLORS
         (bl.x - hW) / hW, (bl.y - hH) / hH, 0.0f,       clr->r, clr->g, clr->b, clr->a,  //Bottom left
         brect.bottomLeft().x / (float)texture->width, brect.bottomLeft().y / (float)texture->height,                                      //
@@ -51,6 +51,21 @@ void Sprite::Render(vec2i* screen) {
 
         (br.x - hW) / hW, (br.y - hH) / hH, 0.0f,       clr->r, clr->g, clr->b, clr->a,  //Bottom right
         brect.bottomRight().x / (float)texture->width, brect.bottomRight().y / (float)texture->height,                                    //
+    };*/
+
+    GLfloat verts[] ={
+            //COORDINATES                                  / COLORS
+            0.0f, 0.0f, 0.0f, 1.0f, 1.0f, 1.0f, 1.0f,  //Bottom left
+            0.0f, 0.0f,                                      //
+
+            0.0f, 1.0f, 0.0f,   1.0f, 1.0f, 1.0f, 1.0f,  //Top Left
+            0.0f, 1.0f,                                           //
+
+            1.0f, 1.0f, 0.0f,   1.0f, 1.0f, 1.0f, 1.0f,  //Top right
+            1.0f, 1.0f,                                     //
+
+            1.0f, 0.0f, 0.0f,   1.0f, 1.0f, 1.0f, 1.0f,  //Bottom right
+            1.0f, 0.0f,                                  //
     };
 
     VBO vbo(verts, sizeof(verts));
@@ -68,6 +83,7 @@ void Sprite::Render(vec2i* screen) {
     texture->Bind();
     vao.Bind();
     glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
+    std::cout << brect.sizeX << " , " << brect.sizeY <<"\n";
 }
 
 Sprite::~Sprite() = default;

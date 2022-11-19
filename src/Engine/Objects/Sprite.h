@@ -53,6 +53,8 @@ public:
             bounds->width = tex->width;
             bounds->height = tex->height;
         }
+        bounds->width = 32;
+        bounds->height = 32;
         this->clr = color;
         this->z_index = z_index;
 

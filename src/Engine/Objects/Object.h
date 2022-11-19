@@ -24,16 +24,16 @@ public:
     virtual void Render(vec2i* screen) = 0;
     virtual void Update(double dt) = 0;
 
-    void AddComponent(Component component){
-        components.push_back(&component);
+    void AddComponent(Component* component){
+        components.push_back(component);
     }
-    void RemoveComponent(Component component){
+    void RemoveComponent(Component* component){
         vector<Component*> temp = {};
 
         for (int i = 0; i < components.size(); i++){
-            if (string(*components[i]) == string(component))
+            if (string(*components[i]) == string(*component))
                 continue;
-            temp.push_back(&component);
+            temp.push_back(component);
         }
         components = temp;
 

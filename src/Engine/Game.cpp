@@ -7,7 +7,7 @@ Game::Game(vec2i windSize, const char *name) {
     windowCaption = name;
     windowSize = &windSize;
 
-    std::string file = FileManager::ReadFile("config.json");
+    /*std::string file = FileManager::ReadFile("config.json");
     nlohmann::json js = nlohmann::json::parse(file);
     if (!js.empty()) {
         windowSize->x = js["screen_width"];
@@ -16,7 +16,7 @@ Game::Game(vec2i windSize, const char *name) {
         cursorShown = js["cursor_shown"];
         std::cout << cursorShown;
         //windowCaption = std::string(js["caption"]).c_str();
-    }
+    }*/
 }
 
 [[maybe_unused]] void Game::Initialize() {
@@ -67,10 +67,12 @@ Game::Game(vec2i windSize, const char *name) {
     textures.push_back(&cursorPng);
     textures.push_back(&spyral);
 
-    Sprite* spr = new Sprite(0.0f, 0.0f, 200.0f, 200.0f, defShader, spyral);
+
+
+    Sprite* spr = new Sprite(0.0f, 0.0f, 200.0f, 200.0f, defShader, cursorPng);
     //CursorSprite* cursor = new CursorSprite(32.0f, 32.0f, defShader, cursorPng);
 
-    spr->AddComponent(CursorComponent(spr));
+    //spr->AddComponent(new CursorComponent(spr));
     std::cout << spr->ListComponents();
     Scene scene;
 
